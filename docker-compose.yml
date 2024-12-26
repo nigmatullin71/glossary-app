@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./glossary.db:/app/glossary.db
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend/build/static
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+
+  # Для SQLite вам не нужен отдельный контейнер базы данных
+  db:
+    image: nouchka/sqlite3
+    container_name: sqlite
+    volumes:
+      - ./glossary.db:/glossary.db
+    command: ["tail", "-f", "/dev/null"]

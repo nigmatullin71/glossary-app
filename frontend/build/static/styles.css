@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+header {
+  background-color: #6200ea;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6200ea;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer button , input, button {
+  background-color: #fff;
+  color: #6200ea;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+footer button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer .user-info {
+  margin-left: auto;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Page Styles */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Glossary Block Styles */
+#glossary .term-block {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#glossary .term-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#graph-container {
+  width: 100%;
+  height: 80vh; /* Задаёт высоту 80% от высоты экрана */
+  margin: 0 auto; /* Центрирование графа */
+  border: 1px solid #ddd; /* Граница для визуальной отладки */
+  overflow: hidden; /* Убирает скроллинг */
+}
+
+

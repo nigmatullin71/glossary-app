@@ -1,0 +1,12 @@
+{
+  "name": "glossary-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server -c-1 --proxy http://backend:8000",
+    "dev": "npm start"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "proxy": "http://backend:8000"
+}

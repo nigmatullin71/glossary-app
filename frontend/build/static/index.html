@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary and Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем CSS для Vis.js -->
+    <link href="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="glossary-page" class="page active">
+        <header>
+          <h1>Glossary</h1>
+        </header>
+        <main id="glossary"></main>
+        <form id="add-term-form">
+          <input id="term-input" type="text" placeholder="Термин" required />
+          <input id="definition-input" type="text" placeholder="Описание" required />
+          <button type="submit">Добавить</button>
+        </form>
+      </div>
+
+    <!-- Graph Page -->
+    <div id="graph-page" class="page">
+        <header>
+            <h1>Graph</h1>
+        </header>
+        <main>
+            <!-- Контейнер для графа Vis.js -->
+            <div id="graph-container" style="height: 500px;"></div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <button id="glossary-btn">Glossary</button>
+        <button id="graph-btn">Graph</button>
+        <span class="user-info">Глеб Нигматуллин</span>
+        <button id="scroll-up-btn">Наверх</button>
+    </footer>
+
+    <script src="main.js"></script>
+    <!-- Подключаем Vis.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.js"></script>
+</body>
+</html>
